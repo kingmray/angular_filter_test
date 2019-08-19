@@ -1,0 +1,17 @@
+<p>
+  filter: {{filter}}
+</p>
+
+{{ data | json }}
+
+<app-search [filter]="filter"></app-search>
+
+<ul class="search-result">
+  <li *ngFor="let hero of data">
+    <a routerLink="/detail/{{hero.id}}">
+      {{hero.name}}
+    </a>
+  </li>
+</ul>
+
+{{ categories | json }}

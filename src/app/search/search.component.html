@@ -1,0 +1,11 @@
+  <div id="search-component">
+    <h4><label for="search-box">Hero Search</label></h4>
+
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+    <select #searchFilterBox id="select-box" (change)="searchFilter(searchFilterBox.value)"
+      [value]="listService.searchFilters.value"
+    >
+      <option></option>
+      <option *ngFor="let cat of categories">{{cat}}</option>
+    </select>
+  </div>
